@@ -25,9 +25,9 @@
 
     <scm>
         <url>https://github.com/androkc/dtos-release-plugin</url>
-        <connection>scm:git:ssh://git@github.com/androkc/dtos-release-plugin.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/androkc/dtos-release-plugin.git</developerConnection>
-      <tag>dtos-1.0.0</tag>
+        <connection>scm:git:git@github.com:androkc/dtos-release-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:androkc/dtos-release-plugin.git</developerConnection>
+        <tag>dtos-1.0.0</tag>
   </scm>
 
     <distributionManagement>
