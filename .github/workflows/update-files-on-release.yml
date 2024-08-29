@@ -74,7 +74,7 @@ jobs:
           SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
 
       - name: Maven release:prepare
-        run: mvn release:prepare --settings .ci/settings.xml -B -DskipTests=true
+        run: mvn release:prepare -B -DskipTests=true
 
       - name: Maven release:perform
         run: mvn release:perform --settings .ci/settings.xml -B -DskipTests=true
