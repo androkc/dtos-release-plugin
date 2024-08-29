@@ -25,8 +25,8 @@
 
     <scm>
         <url>https://github.com/androkc/dtos-release-plugin</url>
-        <connection>https://x-access-token:${env.PAT_TOKEN}@github.com/androkc/dtos-release-plugin.git</connection>
-        <developerConnection>https://x-access-token:${env.PAT_TOKEN}@github.com/androkc/dtos-release-plugin.git</developerConnection>
+        <connection>scm:git:https://x-access-token:${env.PAT_TOKEN}@github.com/androkc/dtos-release-plugin.git</connection>
+        <developerConnection>scm:git:https://x-access-token:${env.PAT_TOKEN}@github.com/androkc/dtos-release-plugin.git</developerConnection>
         <tag>dtos-1.0.2</tag>
   </scm>
 
