@@ -23,7 +23,7 @@ jobs:
       - name: Build and Deploy
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-        run: mvn clean release:prepare release:perform deploy
+        run: mvn -X release:prepare release:perform -Pgithub-release
 
 
 
