@@ -57,8 +57,13 @@ jobs:
           # Отключаем проверку хоста для Docker
           mkdir -p ~/.ssh
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+          
+          Добавляем SSH ключ в агент (ключ с парольной фразой)
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - <<< "$SSH_PASSPHRASE"
+        shell: /usr/bin/bash -e {0}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Секретный ключ, сохраненный в Secrets
+          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
 
       - name: Maven release:prepare
         run: mvn release:prepare --settings .ci/settings.xml -B -DskipTests=true
