@@ -73,6 +73,13 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Секретный ключ, сохраненный в Secrets
           SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
 
+
+      - name: Set up Git user
+        run: |
+          git config --global user.email "androkc1999@example.com"
+          git config --global user.name "androkc"
+          
+
       - name: Maven release:prepare
         run: mvn release:prepare -B -DskipTests=true
 
