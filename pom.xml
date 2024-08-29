@@ -23,19 +23,19 @@
         </dependency>
     </dependencies>
 
-    <scm>
-        <url>https://github.com/androkc/dtos-release-plugin</url>
-        <connection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</connection>
-        <developerConnection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</developerConnection>
-        <tag>dtos-1.0.2</tag>
-  </scm>
-
 <!--    <scm>-->
 <!--        <url>https://github.com/androkc/dtos-release-plugin</url>-->
-<!--        <connection>scm:git:git@github.com:androkc/dtos-release-plugin.git</connection>-->
-<!--        <developerConnection>scm:git:git@github.com:androkc/dtos-release-plugin.git</developerConnection>-->
+<!--        <connection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</connection>-->
+<!--        <developerConnection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</developerConnection>-->
 <!--        <tag>dtos-1.0.2</tag>-->
-<!--    </scm>-->
+<!--  </scm>-->
+
+    <scm>
+        <url>https://github.com/androkc/dtos-release-plugin</url>
+        <connection>scm:git:git@github.com:androkc/dtos-release-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:androkc/dtos-release-plugin.git</developerConnection>
+        <tag>dtos-1.0.2</tag>
+    </scm>
 
     <distributionManagement>
         <snapshotRepository>
