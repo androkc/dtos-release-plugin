@@ -50,9 +50,18 @@ jobs:
           
           # Запускаем ssh-agent
           eval $(ssh-agent -s)
-          
+               
+               
+          # Используем expect для автоматического ввода парольной фразы
+          sudo apt-get install -y expect
+          expect -c "
+          spawn ssh-add <(echo \"$SSH_PRIVATE_KEY\")
+          expect \"Enter passphrase\"
+          send \"$SSH_PASSPHRASE\r\"
+          expect eof
+          "
           # Добавляем SSH ключ в агент, используя парольную фразу
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - <<< "$SSH_PASSPHRASE"
+          # echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - <<< "$SSH_PASSPHRASE"
           
           # Отключаем проверку хоста для Docker
           mkdir -p ~/.ssh
