@@ -51,15 +51,14 @@ jobs:
           # Запускаем ssh-agent
           eval $(ssh-agent -s)
           
-          # Добавляем SSH ключ в агент
-          ssh-add <(echo "$SSH_PRIVATE_KEY")
+          # Добавляем SSH ключ в агент, используя парольную фразу
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - <<< "$SSH_PASSPHRASE"
           
           # Отключаем проверку хоста для Docker
           mkdir -p ~/.ssh
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
           
-          Добавляем SSH ключ в агент (ключ с парольной фразой)
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - <<< "$SSH_PASSPHRASE"
+
         shell: /usr/bin/bash -e {0}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Секретный ключ, сохраненный в Secrets
