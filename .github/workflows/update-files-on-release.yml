@@ -31,7 +31,7 @@ jobs:
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run:
-          mvn clean release:prepare -Dgit.token=${{ env.PAT_TOKEN }} -X -e
+          mvn clean release:prepare -Dgit.token=${{ env.PAT_TOKEN }} -Darguments=-DskipCommit=true -X -e
 
 
 
