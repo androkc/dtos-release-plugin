@@ -31,7 +31,12 @@ jobs:
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run:
-          mvn clean release:prepare -Dgit.token=${{ secrets.GITHUB_TOKEN }} -X -e
+          |
+          mvn clean release:prepare  \
+          -Dgit.token=${{ secrets.GITHUB_TOKEN }} \
+          -Darguments="-DpushChanges=true" \
+          -Dscm.connection="scm:git:https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/androkc/dtos-release-plugin.git" \
+          -Dscm.developerConnection="scm:git:https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/androkc/dtos-release-plugin.git" -X -e
 
 
 
