@@ -28,7 +28,7 @@ jobs:
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run:
-          mvn clean release:prepare release:perform -Dgit.token=$PAT_TOKEN
+          mvn clean release:prepare release:perform -Dgit.token=${{ env.PAT_TOKEN }}
 
 
 
