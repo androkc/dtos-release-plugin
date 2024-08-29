@@ -70,7 +70,7 @@ jobs:
           git config --global user.email "androkc1999@example.com"
           git config --global user.name "androkc"
 
-          mvn release:prepare -Dgit.token=${{ env.PAT_TOKEN }}
+          mvn release:prepare --settings .ci/settings.xml -B -DskipTests=true
         shell: /usr/bin/bash -e {0}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Секретный ключ, сохраненный в Secrets

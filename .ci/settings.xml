@@ -1,3 +1,10 @@
 <settings>
-
+    <servers>
+        <server>
+            <id>my-repo</id>
+            <username>androkc</username>
+            <privateKey>${env.SSH_PRIVATE_KEY}</privateKey>
+            <passphrase>${env.SSH_PASSPHRASE}</passphrase>
+        </server>
+    </servers>
 </settings>
