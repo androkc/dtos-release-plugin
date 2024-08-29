@@ -32,7 +32,7 @@ jobs:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run:
           |
-          mvn -B release:prepare -Dgit.token=${{ secrets.GITHUB_TOKEN }} -DskipTests
+          mvn clean -B release:prepare -Dgit.token=${{ secrets.GITHUB_TOKEN }} -DskipTests
           
 
 
