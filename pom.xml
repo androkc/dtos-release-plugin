@@ -37,6 +37,12 @@
         <tag>dtos-1.0.2</tag>
     </scm>
 
+    <repositories>
+        <repository>
+            <id>my-repo</id> <!-- Должен совпадать с id в settings.xml -->
+            <url>git@github.com:androkc/dtos-release-plugin.git</url>
+        </repository>
+    </repositories>
     <distributionManagement>
         <snapshotRepository>
             <id>nexus</id>
