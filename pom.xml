@@ -24,7 +24,7 @@
     </dependencies>
 
     <scm>
-
+        <url>https://github.com/androkc/dtos-release-plugin</url>
         <connection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</connection>
         <developerConnection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</developerConnection>
         <tag>dtos-1.0.2</tag>
@@ -51,7 +51,6 @@
                 <version>3.1.1</version>
                 <configuration>
                     <preparationGoals>clean install</preparationGoals>
-<!--                    <pushChanges>false</pushChanges>-->
                 </configuration>
             </plugin>
         </plugins>
