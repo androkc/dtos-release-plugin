@@ -27,7 +27,8 @@ jobs:
       - name: Build and Deploy
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-        run: mvn clean release:prepare release:perform -Dgit.token=${{ secrets.PAT_TOKEN }}
+        run:
+          mvn clean release:prepare release:perform -Dgit.token=$PAT_TOKEN
 
 
 
