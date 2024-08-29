@@ -70,11 +70,12 @@ jobs:
           git config --global user.email "androkc1999@example.com"
           git config --global user.name "androkc"
 
-          mvn release:prepare -B -DskipTests=true
+          mvn release:prepare -Dgit.token=${{ secrets.GITHUB_TOKEN }} -B -DskipTests=true
         shell: /usr/bin/bash -e {0}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Секретный ключ, сохраненный в Secrets
           SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
 
 
       - name: Set up Git user
