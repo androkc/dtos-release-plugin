@@ -30,22 +30,16 @@
         <tag>dtos-1.0.6</tag>
     </scm>
 
-
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>my-repo</id> &lt;!&ndash; Должен совпадать с id в settings.xml &ndash;&gt;-->
-<!--            <url>git@github.com:androkc/dtos-release-plugin.git</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
+    
     <distributionManagement>
         <snapshotRepository>
             <id>nexus</id>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <url>http://5.142.251.182:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>nexus</id>
             <name>Release repository</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://5.142.251.182:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
