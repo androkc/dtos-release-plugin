@@ -87,18 +87,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
 
-      - name: Set up Git user
-        run: |
-          git config --global user.email "androkc1999@example.com"
-          git config --global user.name "androkc"
-          
-
-      - name: Maven release:prepare
-        run: mvn release:prepare --settings .ci/settings.xml -B -DskipTests=true
-
-      - name: Maven release:perform
-        run: mvn release:perform --settings .ci/settings.xml -B -DskipTests=true
-
 
 
 
