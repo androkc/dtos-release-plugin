@@ -63,6 +63,10 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.1.1</version>
                 <configuration>
+                    <serverId>github-ssh</serverId>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
                     <preparationGoals>clean install</preparationGoals>
                 </configuration>
             </plugin>
