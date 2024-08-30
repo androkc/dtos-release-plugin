@@ -33,7 +33,7 @@
     <scm>
         <url>https://github.com/androkc/dtos-release-plugin.git</url>
         <connection>scm:git:https://github.com/androkc/dtos-release-plugin.git</connection>
-        <developerConnection>https://github.com/androkc/dtos-release-plugin.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/androkc/dtos-release-plugin.git</developerConnection>
         <tag>dtos-1.0.2</tag>
     </scm>
 
