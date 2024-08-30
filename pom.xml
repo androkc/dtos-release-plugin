@@ -23,12 +23,19 @@
         </dependency>
     </dependencies>
 
+<!--    <scm>-->
+<!--        <url>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</url>-->
+<!--        <connection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</connection>-->
+<!--        <developerConnection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</developerConnection>-->
+<!--        <tag>dtos-1.0.2</tag>-->
+<!--  </scm>-->
+
     <scm>
-        <url>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</url>
-        <connection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</connection>
-        <developerConnection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</developerConnection>
+        <url>https://github.com/androkc/dtos-release-plugin.git</url>
+        <connection>scm:git:https://github.com/androkc/dtos-release-plugin.git</connection>
+        <developerConnection>https://github.com/androkc/dtos-release-plugin.git</developerConnection>
         <tag>dtos-1.0.2</tag>
-  </scm>
+    </scm>
 
 <!--    <scm>-->
 <!--        <url>https://github.com/androkc/dtos-release-plugin</url>-->
@@ -63,9 +70,15 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.1.1</version>
                 <configuration>
-                    <releaseProfiles>releases</releaseProfiles>
+                    <username>adnrokc</username>
+                    <password>${git.token}</password>
                     <preparationGoals>clean install</preparationGoals>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
