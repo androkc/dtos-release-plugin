@@ -76,6 +76,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Секретный ключ, сохраненный в Secrets
           SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
 
       - name: Set up Git user
