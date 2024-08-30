@@ -23,13 +23,6 @@
         </dependency>
     </dependencies>
 
-<!--    <scm>-->
-<!--        <url>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</url>-->
-<!--        <connection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</connection>-->
-<!--        <developerConnection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</developerConnection>-->
-<!--        <tag>dtos-1.0.2</tag>-->
-<!--  </scm>-->
-
     <scm>
         <url>https://github.com/androkc/dtos-release-plugin.git</url>
         <connection>scm:git:https://github.com/androkc/dtos-release-plugin.git</connection>
@@ -37,19 +30,13 @@
         <tag>dtos-1.0.6</tag>
     </scm>
 
-<!--    <scm>-->
-<!--        <url>https://github.com/androkc/dtos-release-plugin</url>-->
-<!--        <connection>scm:git:git@github.com:androkc/dtos-release-plugin.git</connection>-->
-<!--        <developerConnection>scm:git:git@github.com:androkc/dtos-release-plugin.git</developerConnection>-->
-<!--        <tag>dtos-1.0.2</tag>-->
-<!--    </scm>-->
 
-    <repositories>
-        <repository>
-            <id>my-repo</id> <!-- Должен совпадать с id в settings.xml -->
-            <url>git@github.com:androkc/dtos-release-plugin.git</url>
-        </repository>
-    </repositories>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>my-repo</id> &lt;!&ndash; Должен совпадать с id в settings.xml &ndash;&gt;-->
+<!--            <url>git@github.com:androkc/dtos-release-plugin.git</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
     <distributionManagement>
         <snapshotRepository>
             <id>nexus</id>
@@ -76,11 +63,6 @@
                 </configuration>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <version>2.7.18</version>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 
