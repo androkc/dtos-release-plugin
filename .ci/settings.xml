@@ -3,9 +3,8 @@
         <server>
             <id>github-ssh</id>
             <username>androkc</username>
-            <password>${env.PASSWORD}</password>
-<!--            <privateKey>${env.SSH_PRIVATE_KEY}</privateKey>-->
-<!--            <passphrase>${env.SSH_PASSPHRASE}</passphrase>-->
+            <privateKey>${env.SSH_PRIVATE_KEY}</privateKey>
+            <passphrase>${env.SSH_PASSPHRASE}</passphrase>
         </server>
     </servers>
 </settings>

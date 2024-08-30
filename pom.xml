@@ -23,19 +23,19 @@
         </dependency>
     </dependencies>
 
-<!--    <scm>-->
-<!--        <url>https://github.com/androkc/dtos-release-plugin</url>-->
-<!--        <connection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</connection>-->
-<!--        <developerConnection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</developerConnection>-->
-<!--        <tag>dtos-1.0.2</tag>-->
-<!--  </scm>-->
-
     <scm>
         <url>https://github.com/androkc/dtos-release-plugin</url>
-        <connection>scm:git:git@github.com:androkc/dtos-release-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:androkc/dtos-release-plugin.git</developerConnection>
+        <connection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</connection>
+        <developerConnection>scm:git:https://x-access-token:${git.token}@github.com/androkc/dtos-release-plugin.git</developerConnection>
         <tag>dtos-1.0.2</tag>
-    </scm>
+  </scm>
+
+<!--    <scm>-->
+<!--        <url>https://github.com/androkc/dtos-release-plugin</url>-->
+<!--        <connection>scm:git:git@github.com:androkc/dtos-release-plugin.git</connection>-->
+<!--        <developerConnection>scm:git:git@github.com:androkc/dtos-release-plugin.git</developerConnection>-->
+<!--        <tag>dtos-1.0.2</tag>-->
+<!--    </scm>-->
 
     <repositories>
         <repository>
@@ -54,34 +54,7 @@
             <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
-    <profiles>
-        <profile>
-            <id>releases</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.7.0</version>
-                        <executions>
-                            <execution>
-                                <id>default-deploy</id>
-                                <phase>deploy</phase>
-                                <goals>
-                                    <goal>deploy</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <serverId>nexus-releases</serverId>
-                            <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
-                            <skipStaging>true</skipStaging>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+
 
     <build>
         <plugins>
